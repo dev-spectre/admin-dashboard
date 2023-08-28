@@ -1,13 +1,261 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Admin Dashboard</title>
 
+  <link rel="icon" href="./assets/icons/logo.svg" type="image/x-icon">
+
   <link rel="stylesheet" href="css/style.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@500;600;700&display=swap" rel="stylesheet">
+
+  <script defer src="./js/script.js"></script>
 </head>
+
 <body>
-  
+  <div class="grid-container">
+    <div class="nav close">
+      <button type="button" class="nav__close">
+        <img src="./assets/icons/hamburger-menu-close.svg" alt="close menu">
+      </button>
+      <h1>
+        <a href="#">
+          <span><img src="./assets/icons/logo.svg" alt="Home"></span>
+          Dashboard
+        </a>
+      </h1>
+      <nav class="nav__links">
+        <ul>
+          <li>
+            <a href="#">
+              <span>
+                <img src="./assets/icons/home.svg" alt="home">
+              </span>
+              Home
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <span>
+                <img src="./assets/icons/profile.svg" alt="profile">
+              </span>
+              Profile
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <span>
+                <img src="./assets/icons/messages.svg" alt="messages">
+              </span>
+              Messages
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <span>
+                <img src="./assets/icons/history.svg" alt="history">
+              </span>
+              History
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <span>
+                <img src="./assets/icons/tasks.svg" alt="tasks">
+              </span>
+              Tasks
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <span>
+                <img src="./assets/icons/communities.svg" alt="communities">
+              </span>
+              Communities
+            </a>
+          </li>
+        </ul>
+        <ul>
+          <li>
+            <a href="#">
+              <span>
+                <img src="./assets/icons/settings.svg" alt="settings">
+              </span>
+              Settings
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <span>
+                <img src="./assets/icons/privacy.svg" alt="privacy">
+              </span>
+              privacy
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <span>
+                <img src="./assets/icons/support.svg" alt="support">
+              </span>
+              Support
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+    <header>
+      <button class="menu">
+        <img src="./assets/icons/hamburger-menu-open.svg" alt="menu">
+      </button>
+      <div class="search-container flex">
+        <form class="search flex">
+            <input type="search" name="project-search" id="search" size="1">
+            <button aria-label="search">
+              <img src="./assets/icons/search.svg" alt="search">
+            </button>
+          </form>
+        <button class="filter transparent-btn center">
+          <img src="./assets/icons/filter.svg" alt="filter">
+        </button>
+      </div>
+      <button type="button" class="notification transparent-btn">
+        <img src="./assets/icons/notification.svg" alt="notification">
+      </button>
+      <a href="#" class="account">
+        <span class="account__name">Spectre</span>
+        <span class="account__pfp transparent-btn center">
+          <img src="./assets/icons/profile.svg" alt="profile">
+        </span>
+      </a>
+      <div class="actions">
+        <button type="button" class="actions__new">
+          <img src="./assets/icons/new.svg" alt="new">
+          <span>New</span>
+        </button>
+        <button type="button" class="actions__upload">
+          <img src="./assets/icons/upload.svg" alt="upload">
+          <span>Upload</span>
+        </button>
+        <button type="button" class="actions__share">
+          <img src="./assets/icons/share.svg" alt="share">
+          <span>Share</span>
+        </button>
+      </div>
+    </header>
+    <main>
+      <section class="project">
+        <div>
+          <div>
+            <h2 class="title">My Projects</h2>
+            <p class="count">0</p>
+          </div>
+          <div class="collapse">
+            <img src="./assets/icons/collapse.svg" alt="collapse">
+          </div>
+        </div>
+        <div class="project__cards">
+          <div class="card">
+            <h3 class="card__title"></h3>
+            <div class="card__img"></div>
+            <div class="card__description"></div>
+          </div>
+          <div class="card">
+            <h3 class="card__title"></h3>
+            <div class="card__img"></div>
+            <div class="card__description"></div>
+          </div>
+          <div class="card">
+            <h3 class="card__title"></h3>
+            <div class="card__img"></div>
+            <div class="card__description"></div>
+          </div>
+          <div class="card">
+            <h3 class="card__title"></h3>
+            <div class="card__img"></div>
+            <div class="card__description"></div>
+          </div>
+          <div class="card">
+            <h3 class="card__title"></h3>
+            <div class="card__img"></div>
+            <div class="card__description"></div>
+          </div>
+          <div class="card">
+            <h3 class="card__title"></h3>
+            <div class="card__img"></div>
+            <div class="card__description"></div>
+          </div>
+        </div>
+      </section>
+      <section class="exercise-container">
+        <div>
+          <h2 class="title">CSS Exercises</h2>
+          <p class="count">0</p>
+        </div>
+        <div class="exercise">
+          <div>
+            <h2></h2>
+            <p></p>
+          </div>
+          <div>
+            <h2></h2>
+            <p></p>
+          </div>
+          <div>
+            <h2></h2>
+            <p></p>
+          </div>
+          <div>
+            <h2></h2>
+            <p></p>
+          </div>
+          <div>
+            <h2></h2>
+            <p></p>
+          </div>
+          <div>
+            <h2></h2>
+            <p></p>
+          </div>
+        </div>
+      </section>
+      <section class="exercise-container">
+        <div>
+          <h2 class="title">JS Exercises</h2>
+          <p class="count">0</p>
+        </div>
+        <div class="exercise">
+          <div>
+            <h2></h2>
+            <p></p>
+          </div>
+          <div>
+            <h2></h2>
+            <p></p>
+          </div>
+          <div>
+            <h2></h2>
+            <p></p>
+          </div>
+          <div>
+            <h2></h2>
+            <p></p>
+          </div>
+          <div>
+            <h2></h2>
+            <p></p>
+          </div>
+          <div>
+            <h2></h2>
+            <p></p>
+          </div>
+        </div>
+      </section>
+    </main>
 </body>
-</html> 
+
+</html>

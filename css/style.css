@@ -1,3 +1,12 @@
+:root {
+  --clr-primary: #8d40da;
+  --clr-primary-light: #a567f475;
+  --clr-secondary: #404040;
+  --clr-background: #282525;
+  --clr-white: #fff;
+  --clr-white-dark: #d9d9d9;
+}
+
 *,
 *::before,
 *::after {
@@ -6,11 +15,292 @@
   padding: 0;
 }
 
-img {
-  width: 100%;
+body {
+  background-color: var(--clr-background);
+  color: var(--clr-white);
+  font-family: "Nunito", sans-serif, system-ui, -apple-system,
+    BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell,
+    "Open Sans", "Helvetica Neue";
 }
 
-body {
-  background-color: #282525;
-  background-image: linear-gradient();
+a {
+  font: inherit;
+  color: inherit;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.flex {
+  display: flex;
+}
+
+.center {
+  display: inline-grid;
+  place-items: center;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  grid-template-rows: 125px 1fr;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+h1 {
+  font-size: 2rem;
+  margin-bottom: 50px;
+  padding: 0 20px;
+}
+
+header {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr) max-content;
+  grid-template-areas:
+    "menu  search   search   notification  account"
+    "....  actions  actions    actions     actions";
+  background-image: linear-gradient(
+    to bottom,
+    var(--clr-primary-light),
+    var(--clr-background)
+  );
+  padding: 30px;
+  gap: 15px;
+}
+
+.menu {
+  grid-area: menu;
+  justify-self: start;
+  background-color: transparent;
+  border: none;
+  display: none;
+}
+
+.search-container {
+  grid-area: search;
+}
+
+.notification {
+  grid-area: notification;
+  justify-self: end;
+}
+
+.account {
+  grid-area: account;
+  align-self: center;
+}
+
+.actions {
+  grid-area: actions;
+  justify-self: end;
+  display: flex;
+  gap: 10px;
+}
+
+.nav {
+  background-color: var(--clr-primary);
+  max-width: 300px;
+  min-height: 100lvh;
+  grid-row: span 2;
+  display: flex;
+  flex-direction: column;
+  padding: 30px 0;
+  font-size: 1.7rem;
+}
+
+.nav ul {
+  list-style-type: none;
+  display: grid;
+  gap: 10px;
+}
+
+.nav a {
+  display: grid;
+  grid-template-columns: 16px 1fr;
+  align-items: center;
+  gap: 30px;
+}
+
+.nav__links {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  max-height: 1080px;
+  font-weight: 600;
+  gap: 10px;
+}
+
+.nav span:has(> img) {
+  display: grid;
+  place-items: center;
+}
+
+.nav__links li {
+  padding: 5px 20px;
+}
+
+.nav__links li:hover {
+  background-color: var(--clr-primary-light);
+}
+
+.search-container {
+  gap: 10px;
+}
+
+.search {
+  flex: 1;
+}
+
+.search input,
+.search button {
+  height: 2.5rem;
+  background-color: #f8f0ff3d;
+  border: 1px solid var(--clr-white);
+}
+
+.search input {
+  border-radius: 999px 0 0 999px;
+  font: inherit;
+  padding-inline: 20px 10px;
+  border-right: 0px;
+  flex: 1;
+}
+
+.search button {
+  border-radius: 0 999px 999px 0;
+  padding: 5px 10px;
+  border-left: 0px;
+  width: 50px;
+}
+
+.search img {
+  height: 25px;
+  margin-right: 5px;
+}
+
+.transparent-btn {
+  background-color: transparent;
+  border: 1px solid var(--clr-white);
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+}
+
+.filter {
+  flex-shrink: 0;
+}
+
+.notification img {
+  width: 60%;
+}
+
+.account__pfp img {
+  margin-top: -5px;
+}
+
+.account__name {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.actions button {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-weight: 500;
+  font-size: 1.25rem;
+  padding: 5px 20px;
+  border-radius: 999px;
+  background-color: var(--clr-white-dark);
+  border: none;
+}
+
+.actions img {
+  height: 20px;
+}
+
+.nav__close {
+  display: none;
+  background-color: transparent;
+  border: none;
+}
+
+main {
+  padding: 30px;
+}
+
+@media (max-width: 50.625em) {
+  .menu {
+    display: inline-block;
+  }
+  
+  .nav.close {
+    display: none;
+  }
+  
+  .nav {
+    position: absolute;
+    display: block;
+    width: min(100%, 360px);
+  }
+  
+  .nav__close {
+    display: inline;
+    position: absolute;
+    top: 2.5%;
+    right: 7%;
+  }
+
+  header {
+    grid-column: span 2;
+  }
+}
+
+@media (max-width: 36.25em) {
+  .actions span {
+    display: none;
+  }
+
+  .actions button {
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    padding: 0;
+    display: grid;
+    place-items: center;
+  }
+
+  .actions button:first-child img {
+    margin-left: 5px;
+  }
+
+  header {
+    grid-template-columns: min-content repeat(2, 1fr) min-content;
+    grid-template-areas: 
+      "menu search search  search    account   "
+      ".... ...... actions actions notification"
+    ;
+    column-gap: 10px;
+    padding: 10px;
+  }
+
+  .account__name {
+    display: none;
+  }
+
+  .search-container {
+    margin-inline: auto;
+    width: 90%;
+  }
+
+  .filter {
+    display: none;
+  }
+
+  main {
+    padding: 10px;
+  }
 }
