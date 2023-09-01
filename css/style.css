@@ -289,7 +289,7 @@ main {
   display: grid;
 }
 
-.project__cards {
+.project {
   list-style-type: none;
   display: grid;
   grid-template-columns: repeat(auto-fit, 280px);
