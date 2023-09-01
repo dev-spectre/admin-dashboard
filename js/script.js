@@ -18,3 +18,13 @@ collapseButtons.forEach(collapseButton => {
     cardSection.classList.toggle("hidden");
   });
 });
+
+const nav = document.querySelector(".nav");
+let touchStart;
+nav.addEventListener("touchmove", (e) => {
+  touchStart = touchStart ?? e.touches[0].clientX;
+  touchLength = touchStart - e.touches[0].clientX;
+  if (touchLength > 70) nav.classList.add("close");
+});
+
+nav.addEventListener("touchend", () => touchStart = null);
