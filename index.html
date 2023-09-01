@@ -149,111 +149,265 @@
     </header>
     <main>
       <section class="project">
-        <div>
-          <div>
+        <div class="flex-between">
+          <div class="flex">
             <h2 class="title">My Projects</h2>
             <p class="count">0</p>
           </div>
-          <div class="collapse">
-            <img src="./assets/icons/collapse.svg" alt="collapse">
-          </div>
+          <button class="collapse transparent-btn transparent-btn--small center">
+            <img src="./assets/icons/collapse.svg" alt="collapse" aria-label="collapse section">
+          </button>
         </div>
-        <div class="project__cards">
-          <div class="card">
-            <h3 class="card__title"></h3>
-            <div class="card__img"></div>
-            <div class="card__description"></div>
-          </div>
-          <div class="card">
-            <h3 class="card__title"></h3>
-            <div class="card__img"></div>
-            <div class="card__description"></div>
-          </div>
-          <div class="card">
-            <h3 class="card__title"></h3>
-            <div class="card__img"></div>
-            <div class="card__description"></div>
-          </div>
-          <div class="card">
-            <h3 class="card__title"></h3>
-            <div class="card__img"></div>
-            <div class="card__description"></div>
-          </div>
-          <div class="card">
-            <h3 class="card__title"></h3>
-            <div class="card__img"></div>
-            <div class="card__description"></div>
-          </div>
-          <div class="card">
-            <h3 class="card__title"></h3>
-            <div class="card__img"></div>
-            <div class="card__description"></div>
-          </div>
-        </div>
+        <ul class="project__cards">
+          <li>
+            <div class="card">
+              <h3 class="card__title">Admin Dashboard</h3>
+              <div class="card__img"></div>
+              <p class="card__description">sdf</p>
+            </div>
+          </li>
+          <li>
+            <div class="card">
+              <h3 class="card__title">Admin Dashboard</h3>
+              <div class="card__img"></div>
+              <p class="card__description">sdf</p>
+            </div>
+          </li>
+          <li>
+            <div class="card">
+              <h3 class="card__title">Admin Dashboard</h3>
+              <div class="card__img"></div>
+              <p class="card__description">sdf</p>
+            </div>
+          </li>
+          <li>
+            <div class="card">
+              <h3 class="card__title">Admin Dashboard</h3>
+              <div class="card__img"></div>
+              <p class="card__description">sdf</p>
+            </div>
+          </li>
+          <li>
+            <div class="card">
+              <h3 class="card__title">Admin Dashboard</h3>
+              <div class="card__img"></div>
+              <p class="card__description">sdf</p>
+            </div>
+          </li>
+          <li>
+            <div class="card">
+              <h3 class="card__title">Admin Dashboard</h3>
+              <div class="card__img"></div>
+              <p class="card__description">sdf</p>
+            </div>
+          </li>
+        </ul>
       </section>
       <section class="exercise-container">
-        <div>
-          <h2 class="title">CSS Exercises</h2>
-          <p class="count">0</p>
+        <div class="flex-between">
+          <div class="flex">
+            <h2 class="title">CSS Exercises</h2>
+            <p class="count">18</p>
+          </div>
+          <button class="collapse transparent-btn transparent-btn--small center">
+            <img src="./assets/icons/collapse.svg" alt="collapse" aria-label="collapse section">
+          </button>
         </div>
-        <div class="exercise">
-          <div>
-            <h2></h2>
-            <p></p>
-          </div>
-          <div>
-            <h2></h2>
-            <p></p>
-          </div>
-          <div>
-            <h2></h2>
-            <p></p>
-          </div>
-          <div>
-            <h2></h2>
-            <p></p>
-          </div>
-          <div>
-            <h2></h2>
-            <p></p>
-          </div>
-          <div>
-            <h2></h2>
-            <p></p>
-          </div>
-        </div>
+        <ul class="exercise">
+          <li>
+            <a href="https://github.com/TheOdinProject/css-exercises/tree/main/foundations/01-css-methods">
+              <h3 class="title">CSS Methods</h3>
+              <p class="description">Add style using inline, internal and external CSS.</p>
+            </a>
+          </li>
+          <li>
+            <a href="https://github.com/TheOdinProject/css-exercises/tree/main/foundations/02-class-id-selectors">
+              <h3 class="title">Class & ID Selectors</h3>
+              <p class="description">Select and style HTML elements by giving them class and ID.</p>
+            </a>
+          </li>
+          <li>
+            <a href="https://github.com/TheOdinProject/css-exercises/tree/main/foundations/03-grouping-selectors">
+              <h3 class="title">Grouping Selectors</h3>
+              <p class="description">Group selectors that share styles.</p>
+            </a>
+          </li>
+          <li>
+            <a href="https://github.com/TheOdinProject/css-exercises/tree/main/foundations/04-chaining-selectors">
+              <h3 class="title">Chaining Selectors</h3>
+              <p class="description">Take advantage of chaining selectors to add different styles for same class.</p>
+            </a>
+          </li>
+          <li>
+            <a href="https://github.com/TheOdinProject/css-exercises/tree/main/foundations/05-descendant-combinator">
+              <h3 class="title">Descendant Combinator</h3>
+              <p class="description">Apply styles to all descendants of an element.</p>
+            </a>
+          </li>
+          <li>
+            <a href="https://github.com/TheOdinProject/css-exercises/tree/main/foundations/06-cascade-fix">
+              <h3 class="title">Cascade Fix</h3>
+              <p class="description">Fix cascade issues by changing specificity of certain selectors.</p>
+            </a>
+          </li>
+          <li>
+            <a href="https://github.com/TheOdinProject/css-exercises/tree/main/margin-and-padding/01-margin-and-padding-1">
+              <h3 class="title">Margin & Padding 01</h3>
+              <p class="description">Use margin and padding to align &lt;div&gt; as instructed.</p>
+            </a>
+          </li>
+          <li>
+            <a href="https://github.com/TheOdinProject/css-exercises/tree/main/margin-and-padding/02-margin-and-padding-2">
+              <h3 class="title">Margin & Padding 02</h3>
+              <p class="description">Create a card as given in the image by changing padding & margin.</p>
+            </a>
+          </li>
+          <li>
+            <a href="https://github.com/TheOdinProject/css-exercises/tree/main/flex/01-flex-center">
+              <h3 class="title">Flex Center</h3>
+              <p class="description">Center &lt;div&gt; using flexbox.</p>
+            </a>
+          </li>
+          <li>
+            <a href="https://github.com/TheOdinProject/css-exercises/tree/main/flex/02-flex-header">
+              <h3 class="title">Flex Header 01</h3>
+              <p class="description">Create a basic header using flexbox.</p>
+            </a>
+          </li>
+          <li>
+            <a href="https://github.com/TheOdinProject/css-exercises/tree/main/flex/03-flex-header-2">
+              <h3 class="title">Flex Header 02</h3>
+              <p class="description">Create a basic header usign flexbox.</p>
+            </a>
+          </li>
+          <li>
+            <a href="https://github.com/TheOdinProject/css-exercises/tree/main/flex/04-flex-information">
+              <h3 class="title">Flex Information</h3>
+              <p class="description">Create a basic information section using flexbox.</p>
+            </a>
+          </li>
+          <li>
+            <a href="https://github.com/TheOdinProject/css-exercises/tree/main/flex/05-flex-modal">
+              <h3 class="title">Flex Modal</h3>
+              <p class="description">Create a basic modal using flexbox.</p>
+            </a>
+          </li>
+          <li>
+            <a href="https://github.com/TheOdinProject/css-exercises/tree/main/flex/06-flex-layout">
+              <h3 class="title">Flex Layout 01</h3>
+              <p class="description">Create a basic search engine page using flexbox.</p>
+            </a>
+          </li>
+          <li>
+            <a href="https://github.com/TheOdinProject/css-exercises/tree/main/flex/07-flex-layout-2">
+              <h3 class="title">Flex Layout 02</h3>
+              <p class="description">Create a basic page layout using flexbox.</p>
+            </a>
+          </li>
+          <li>
+            <a href="https://github.com/TheOdinProject/css-exercises/tree/main/grid/01-grid-layout-1">
+              <h3 class="title">Grid Layout 01</h3>
+              <p class="description">Create a basic page layout using grid.</p>
+            </a>
+          </li>
+          <li>
+            <a href="https://github.com/TheOdinProject/css-exercises/tree/main/grid/02-grid-layout-2">
+              <h3 class="title">Grid Layout 02</h3>
+              <p class="description">Make the page layout responsive using grid.</p>
+            </a>
+          </li>
+          <li>
+            <a href="https://github.com/TheOdinProject/css-exercises/tree/main/grid/03-grid-layout-3">
+              <h3 class="title">Grid Layout 03</h3>
+              <p class="description">Create a basic page layout using grid.</p>
+            </a>
+          </li>
+        </ul>
       </section>
       <section class="exercise-container">
-        <div>
-          <h2 class="title">JS Exercises</h2>
-          <p class="count">0</p>
+        <div class="flex-between">
+          <div class="flex">
+            <h2 class="title">JS Exercises</h2>
+            <p class="count">12</p>
+          </div>
+          <button class="collapse transparent-btn transparent-btn--small center">
+            <img src="./assets/icons/collapse.svg" alt="collapse" aria-label="collapse section">
+          </button>
         </div>
-        <div class="exercise">
-          <div>
-            <h2></h2>
-            <p></p>
-          </div>
-          <div>
-            <h2></h2>
-            <p></p>
-          </div>
-          <div>
-            <h2></h2>
-            <p></p>
-          </div>
-          <div>
-            <h2></h2>
-            <p></p>
-          </div>
-          <div>
-            <h2></h2>
-            <p></p>
-          </div>
-          <div>
-            <h2></h2>
-            <p></p>
-          </div>
-        </div>
+        <ul class="exercise">
+          <li>
+            <a href="https://github.com/TheOdinProject/javascript-exercises/tree/main/01_helloWorld">
+              <h3 class="title">Hello World</h3>
+              <p class="description">Create a basic Hello World function to test if everythins is working fine.</p>
+            </a>
+          </li>
+          <li>
+            <a href="https://github.com/TheOdinProject/javascript-exercises/tree/main/02_repeatString">
+              <h3 class="title">Repeat String</h3>
+              <p class="description">Create a function that repeats string.</p>
+            </a>
+          </li>
+          <li>
+            <a href="https://github.com/TheOdinProject/javascript-exercises/tree/main/03_reverseString">
+              <h3 class="title">Reverse String</h3>
+              <p class="description">Create a function that reverse the give string.</p>
+            </a>
+          </li>
+          <li>
+            <a href="https://github.com/TheOdinProject/javascript-exercises/tree/main/04_removeFromArray">
+              <h3 class="title">Remove From Array</h3>
+              <p class="description">Create a function to remove the element given from an array.</p>
+            </a>
+          </li>
+          <li>
+            <a href="https://github.com/TheOdinProject/javascript-exercises/tree/main/05_sumAll">
+              <h3 class="title">Sum All</h3>
+              <p class="description">Create a function that returns the sum of all the parameters given.</p>
+            </a>
+          </li>
+          <li>
+            <a href="https://github.com/TheOdinProject/javascript-exercises/tree/main/06_leapYears">
+              <h3 class="title">Leap Years</h3>
+              <p class="description">Create a function to check if the given year is a leapyear.</p>
+            </a>
+          </li>
+          <li>
+            <a href="https://github.com/TheOdinProject/javascript-exercises/tree/main/07_tempConversion">
+              <h3 class="title">Temp Conversion</h3>
+              <p class="description">Create function to convert fahrenheit to celsius and vice versa.</p>
+            </a>
+          </li>
+          <li>
+            <a href="https://github.com/TheOdinProject/javascript-exercises/tree/main/08_calculator">
+              <h3 class="title">Calculator</h3>
+              <p class="description">Create a basic calculator.</p>
+            </a>
+          </li>
+          <li>
+            <a href="https://github.com/TheOdinProject/javascript-exercises/tree/main/09_palindromes">
+              <h3 class="title">Palindromes</h3>
+              <p class="description">Create a function to check if the given string is a palindrome.</p>
+            </a>
+          </li>
+          <li>
+            <a href="https://github.com/TheOdinProject/javascript-exercises/tree/main/10_fibonacci">
+              <h3 class="title">Fibonacci</h3>
+              <p class="description">Create a function that returns the nth term of Fibonacci series.</p>
+            </a>
+          </li>
+          <li>
+            <a href="https://github.com/TheOdinProject/javascript-exercises/tree/main/11_getTheTitles">
+              <h3 class="title">Get the Titles</h3>
+              <p class="description">Create a function that returns the title of book from an array of book objects.</p>
+            </a>
+          </li>
+          <li>
+            <a href="https://github.com/TheOdinProject/javascript-exercises/tree/main/12_findTheOldest">
+              <h3 class="title">Find the Oldest</h3>
+              <p class="description">Find the oldest person from an array of person objects.</p>
+            </a>
+          </li>
+        </ul>
       </section>
     </main>
 </body>
