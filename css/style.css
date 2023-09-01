@@ -7,6 +7,38 @@
   --clr-white-dark: #d9d9d9;
 }
 
+/* Chrome, Edge and Safari */
+*::-webkit-scrollbar {
+  height: 6px;
+  width: 6px;
+}
+*::-webkit-scrollbar-track {
+  border-radius: 20px;
+  background-color: #3d404028;
+}
+
+*::-webkit-scrollbar-track:hover {
+  background-color: #828485d7;
+}
+
+*::-webkit-scrollbar-track:active {
+  background-color: #8a8e8f;
+}
+
+*::-webkit-scrollbar-thumb {
+  border-radius: 5px;
+  background-color: var(--clr-primary);
+}
+
+*::-webkit-scrollbar-thumb:hover {
+  background-color: #7D0ACB;
+}
+
+*::-webkit-scrollbar-thumb:active {
+  background-color: #8E0BE6;
+}
+
+
 *,
 *::before,
 *::after {
