@@ -27,11 +27,15 @@ a {
   font: inherit;
   color: inherit;
   text-decoration: none;
-  display: inline-block;
 }
 
 .flex {
   display: flex;
+}
+
+.flex--card {
+  gap: 20px;
+  justify-content: space-between;
 }
 
 .flex-between {
@@ -48,10 +52,9 @@ a {
   display: grid;
   grid-template-columns: 300px 1fr;
   grid-template-rows: 125px 1fr;
-  grid-template-areas: 
+  grid-template-areas:
     "... header"
-    "... main"
-  ;
+    "... main";
 }
 
 button:hover {
@@ -140,7 +143,6 @@ header {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  max-height: 1080px;
   font-weight: 600;
   gap: 10px;
 }
@@ -232,7 +234,7 @@ header {
   transition: transform 300ms ease;
 }
 
-.collapsed{
+.collapsed {
   transform: rotate(180deg);
 }
 
@@ -286,15 +288,107 @@ header {
 main {
   padding: 30px;
   grid-area: main;
-  display: grid;
 }
 
 .project {
+  --card-width: 300px;
+
   list-style-type: none;
   display: grid;
-  grid-template-columns: repeat(auto-fit, 280px);
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-auto-rows: 1fr;
   gap: 20px;
   margin-block: 20px 40px;
+}
+
+.project li {
+  height: 100%;
+}
+
+.card {
+  height: 100%;
+  background-color: black;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: -6px 0 0 0 var(--clr-primary);
+}
+
+.card img[alt="github logo"] {
+  height: 25px;
+  transition: transform 200ms ease-in-out;
+}
+
+.card img[alt="github logo"]:hover,
+.card img[alt="github logo"]:focus {
+  transform: scale(1.2);
+}
+
+.card__img {
+  background-image: url("https://unsplash.it/1920/1080");
+  background-size: contain;
+  background-position: center;
+  aspect-ratio: 16 / 9;
+  position: relative;
+  animation: scaleDown 300ms ease-in-out forwards;
+}
+
+a:hover .card__img,
+a:focus .card__img {
+  animation: scaleUp 300ms ease-in-out forwards;
+}
+
+@keyframes scaleUp {
+  from {
+    background-size: 100%;
+  }
+
+  to {
+    background-size: 110%;
+  }
+}
+
+@keyframes scaleDown {
+  from {
+    background-size: 110%;
+  }
+
+  to {
+    background-size: 100%;
+  }
+}
+
+.overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(transparent, black 100%);
+}
+
+.description-container {
+  padding: 10px;
+  background-color: black;
+}
+
+.description-container a {
+  display: inline-flex;
+}
+
+.card .title {
+  padding: 10px;
+  background-color: var(--clr-secondary);
+  margin-top: 0;
+}
+
+.project-container {
+  grid-area: project;
+}
+
+.exercise-container:first-of-type {
+  grid-area: css;
+}
+
+.exercise-container:last-of-type {
+  grid-area: js;
 }
 
 .exercise {
@@ -305,6 +399,8 @@ main {
   margin-inline: auto;
   max-width: 280px;
   border-radius: 15px;
+  max-height: 550px;
+  overflow-y: scroll;
 }
 
 .exercise li + li {
@@ -317,22 +413,56 @@ main {
 
 .description {
   font-size: 0.9rem;
-  color:  rgb(219, 218, 216);
+  color: rgb(219, 218, 216);
 }
 
 .hidden {
   display: none;
 }
 
+@media (min-width: 60em) {
+  main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      "project project"
+      "css js"
+      ;
+    column-gap: 20px;
+  }
+}
+
+@media (min-width: 40em) and (max-width: 50.625em) {
+  main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      "project project"
+      "css js"
+      ;
+    column-gap: 20px;
+  }
+}
+
+@media (min-width: 67.5em) {
+  main {
+    grid-template-columns: 1fr 300px;
+    grid-template-rows: min-content 1fr;
+    grid-template-areas:
+      "project css"
+      "project js";
+  }
+}
+
 @media (max-width: 50.625em) {
   .menu {
     display: inline-block;
   }
-  
+
   .nav.close {
     display: none;
   }
-  
+
   .nav {
     display: block;
     width: min(100%, 360px);
@@ -348,6 +478,10 @@ main {
   header,
   main {
     grid-column: span 2;
+  }
+
+  .project {
+    padding: 0 20px;
   }
 }
 
@@ -371,10 +505,9 @@ main {
 
   header {
     grid-template-columns: min-content repeat(2, 1fr) min-content;
-    grid-template-areas: 
+    grid-template-areas:
       "menu search search  search    account   "
-      ".... ...... actions actions notification"
-    ;
+      ".... ...... actions actions notification";
     column-gap: 10px;
     padding: 10px;
   }
