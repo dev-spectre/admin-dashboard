@@ -355,11 +355,35 @@ main {
   transform: scale(1.2);
 }
 
+.card__img[data-img="admin-dashboard"] {
+  background-image: url("../assets/img/admin-dashboard.png");
+}
+
+.card__img[data-img="form"] {
+  background-image: url("../assets/img/form.png");
+}
+
+.card__img[data-img="calc"] {
+  background-image: url("../assets/img/calc.png");
+}
+
+.card__img[data-img="sketch"] {
+  background-image: url("../assets/img/eas.png");
+}
+
+.card__img[data-img="rps"] {
+  background-image: url("../assets/img/rps.png");
+}
+
+.card__img[data-img="landing-page"] {
+  background-image: url("../assets/img/lp.png");
+}
+
 .card__img {
-  background-image: url("https://unsplash.it/1920/1080");
-  background-size: contain;
+  background-size: cover;
+  background-repeat: no-repeat;
   background-position: center;
-  aspect-ratio: 16 / 9;
+  aspect-ratio: 16 / 7.5;
   position: relative;
   animation: scaleDown 300ms ease-in-out forwards;
 }
