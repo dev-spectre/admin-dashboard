@@ -33,6 +33,10 @@ Open `index.html` in a browser. No build step required.
     └── img/             # Screenshots and images
 ```
 
+
+## Screenshots
+
+![screenshot](screenshots/home.png)
 ## License
 
 MIT
