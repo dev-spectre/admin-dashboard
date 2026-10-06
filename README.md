@@ -36,7 +36,7 @@ Open `index.html` in a browser. No build step required.
 
 ## Screenshots
 
-![screenshot](screenshots/home.png)
+![screenshot](screenshots/home.jpg)
 ## License
 
 MIT
